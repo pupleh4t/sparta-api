@@ -325,80 +325,75 @@ $app->post('/update', function () use ($app) {
     }
 
     return $response;
-//    if($datas->success() == true){
-        /*$totalWeight = count($datas);
-        var_dump($totalWeight);
-        $X = $Y = $Z = 0;*/
-
-        /*foreach($datas as $marker){
-            $radLat = deg2rad($marker->latitude);
-            $radLng = deg2rad($marker->longitude);
-
-            $x = cos($radLat)*cos($radLng);
-            $y = cos($radLat)*sin($radLng);
-            $z = sin($radLat);
-
-            $X = $X + $x;
-            $Y = $Y + $y;
-            $Z = $Z + $z;
-        }
-
-        $X = $X/$totalWeight;
-        $Y = $Y/$totalWeight;
-        $Z = $Z/$totalWeight;
-
-        $radMidLat = atan2($Y,$X);
-        $hyp = sqrt(($X*$X)+($Y+$Y));
-        $radMidLng = atan2($Z, $hyp);
-
-        $midLat = rad2deg($radMidLat);
-        $midLng = rad2deg($radMidLng);*/
-
-        /*$phql2 = "UPDATE Lahanparkir SET latitude=:midLat:, longitude=:midLng:, max_kapasitas_mobil=:max_kapasitas_mobil: WHERE id_lahan=:id_lahan:";
-        $datas2 = $app->modelsManager->executeQuery($phql2, array(
-            "midLat" => $midLat,
-            "midLng" => $midLng,
-            "max_kapasitas_mobil" => $totalWeight,
-            "id_lahan" => $id_lahan
-        ));
-
-        if($datas2->success() == true){
-            $json_data = array(
-                'error' => false,
-                'error_msg' => "Update data successfully"
-            );
-        }
-        else{
-            $json_data = array(
-                'error' => true,
-                'error_msg' => "failed to update the new LatLng Coordinate"
-            );
-            $response->setJsonContent($json_data);
-        }*/
-
-//        $json_data = array(
-//            'error' => false,
-//            'error_msg' => "id_lahan hasn't registered yet"
-//        );
-//        $response->setJsonContent($json_data);
-//    }
-//    else{
-//        $json_data = array(
-//            'error' => true,
-//            'error_msg' => "id_lahan hasn't registered yet"
-//            );
-//        $response->setJsonContent($json_data);
-//    }
-//
-//    return $response;
 });
 
-$app->post('/data/area/nearest', function () use ($app) {
+$app->post('/data/slot/update', function () use ($app) {
     $json_data = $app->request->getJsonRawBody();
-    $lat = $json_data->latitude;
-    $lng = $json_data->longitude;
+    $id_lahan = $json_data->id_lahan;
+    $lat1 = $json_data->fromLatitude;
+    $lng1 = $json_data->fromLongitude;
+    $lat2 = $json_data->toLatitude;
+    $lng2 = $json_data->toLongitude;
+    $numIntermediatePoint = $json_data->numPoints;
 
+    $distance = getDistance($lat1, $lng1, $lat2, $lng2);
+    $distancePoint = $distance/($numIntermediatePoint-1);
+    $interval=$distancePoint;
+    var_dump($interval);
 
+    echo "distance : ";
+    var_dump($distance);
+
+    $initialBearing = getBearing($lat1, $lng1, $lat2, $lng2);
+
+    echo "Bearing : ";
+    var_dump($initialBearing);
+
+    $response = new Response();
+
+    $array_data[] = array("latitude"=>$lat1,"longitude"=>$lng1);
+
+    if($numIntermediatePoint>2){
+        for($i=0; $i<$numIntermediatePoint-1; $i++){
+            $array_data[] = getDestinationPoint($lat1, $lng1, $initialBearing, $interval);
+            $interval = $interval+$distancePoint;
+        }
+
+        foreach($array_data as $data){
+            $phql = "INSERT INTO Tempslotlahanparkir (id_lahan, latitude, longitude) values(:id_lahan:, :latitude:, :longitude:)";
+            $status = $app->modelsManager->executeQuery($phql, array(
+                "id_lahan"=>$id_lahan,
+                "latitude"=>$data["latitude"],
+                "longitude"=>$data["longitude"]
+            ));
+            var_dump($status->success());
+        }
+
+        var_dump($array_data);
+
+        $response->setJsonContent(array(
+                'error'=>false,
+                'error_msg'=>''
+            )
+        );
+    }
+    else{
+        if($numIntermediatePoint==2){
+            $response->setJsonContent(array(
+                'error'=>false,
+                'error_msg'=>'Warning : No intermediate point'
+            ));
+        }
+        else{
+            $response->setJsonContent(array(
+                    'error'=>true,
+                    'error_msg'=>'minimal points is 2'
+                )
+            );
+        }
+    }
+
+    return $response;
 });
 
 /**
@@ -408,3 +403,82 @@ $app->notFound(function () use ($app) {
     $app->response->setStatusCode(404, "Not Found")->sendHeaders();
     echo $app['view']->render('404');
 });
+
+function getBearing($lat1, $lng1, $lat2, $lng2){
+    $phi1 = deg2rad($lat1);
+    $phi2 = deg2rad($lat2);
+    $lambda1 = deg2rad($lng1);
+    $lambda2 = deg2rad($lng2);
+
+    $y = sin($lambda2-$lambda1) * cos($phi2);
+    $x = ( cos($phi1) * sin($phi2) ) -
+        ( sin($phi1) * cos($phi2) * cos($lambda2-$lambda1));
+
+    $bearing = atan2($y,$x);
+    $bearingDeg = rad2deg($bearing);
+
+    return $bearingDeg;
+}
+
+function getDestinationPoint($lat, $lng, $initBearing, $distance){
+    $phi1 = deg2rad($lat);
+    $lambda1 = deg2rad($lng);
+
+    $bearing=deg2rad($initBearing);
+    $radius = 6371000.00; // in meters
+    $d = $distance/$radius;
+
+    $phi2 = asin( (sin($phi1) * cos($d)) + (cos($phi1) * sin($d) * cos($bearing)));
+
+    $y = sin($bearing) * sin($d) * cos($phi1);
+    $x = cos($d) - sin($phi1) * sin($phi2);
+    $lambda2 = $lambda1 + atan2($y,$x);
+
+    $lat2 = rad2deg($phi2);
+    $lng2 = rad2deg($lambda2);
+
+    $lng2 = fmod($lng2+540, 360) - 180;
+
+    $latlng = array('latitude'=>$lat2,'longitude'=>$lng2);
+
+    return $latlng;
+}
+
+function getDistance2($lat1, $lng1, $lat2, $lng2){
+    $radius = 6371000; // in meters
+
+    $phi1 = deg2rad($lat1);
+    $phi2 = deg2rad($lat2);
+    $delta_phi = deg2rad($lat2-$lat1);
+    $delta_lambda = deg2rad($lng2-$lng1);
+
+    $a = (sin($delta_phi/2) * sin($delta_phi/2))
+        + (cos($phi1) * cos($phi2) * sin($delta_lambda/2) * sin($delta_lambda/2));
+
+    $c = 2 * atan2(sqrt($a), sqrt(1-$a));
+
+    $distance = $radius * $c;
+
+    return $distance;
+}
+
+function getDistance($lat1, $lng1, $lat2, $lng2){
+    $R = 6371000;
+
+    $phi1 = deg2rad($lat1);
+    $phi2 = deg2rad($lat2);
+    $lambda1 = deg2rad($lng1);
+    $lambda2 = deg2rad($lng2);
+
+    $deltaPhi = $phi2 - $phi1;
+    $deltaLambda = $lambda2 - $lambda1;
+
+    $a = (sin($deltaPhi/2) * sin($deltaPhi/2))
+        + (cos($phi1) * cos($phi2) * sin($deltaLambda/2) * sin($deltaLambda/2));
+
+    $c = 2 * atan2(sqrt($a), sqrt(1-$a));
+
+    $d = $R * $c;
+
+    return $d;
+}
