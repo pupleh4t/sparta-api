@@ -339,15 +339,8 @@ $app->post('/data/slot/update', function () use ($app) {
     $distance = getDistance($lat1, $lng1, $lat2, $lng2);
     $distancePoint = $distance/($numIntermediatePoint-1);
     $interval=$distancePoint;
-    var_dump($interval);
-
-    echo "distance : ";
-    var_dump($distance);
 
     $initialBearing = getBearing($lat1, $lng1, $lat2, $lng2);
-
-    echo "Bearing : ";
-    var_dump($initialBearing);
 
     $response = new Response();
 
@@ -366,16 +359,19 @@ $app->post('/data/slot/update', function () use ($app) {
                 "latitude"=>$data["latitude"],
                 "longitude"=>$data["longitude"]
             ));
-            var_dump($status->success());
         }
-
-        var_dump($array_data);
-
-        $response->setJsonContent(array(
+        if($status->success()==true){
+            $response->setJsonContent(array(
                 'error'=>false,
                 'error_msg'=>''
-            )
-        );
+            ));
+        }
+        else{
+            $response->setJsonContent(array(
+                'error'=>true,
+                'error_msg'=>'Error adding in database'
+            ));
+        }
     }
     else{
         if($numIntermediatePoint==2){
