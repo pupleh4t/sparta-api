@@ -265,7 +265,7 @@ $app->post('/update', function () use ($app) {
 
     $response = new Response();
 
-    if (count($datas)> 0){
+    if ($datas->success() == true){
         $totalWeight = count($datas);
         var_dump($totalWeight);
         $X = $Y = $Z = 0;
