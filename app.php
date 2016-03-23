@@ -351,7 +351,7 @@ $app->post('/syncdata', function () use ($app) {
     }
     else{
         $X = $Y = $Z = 0;
-        $totalWeight = count($arrayLatLng);
+        $totalWeight = count(Tempslotlahanparkir::count());
         foreach($arrayLatLng as $latLng){
             $radLat = deg2rad($latLng["latitude"]);
             $radLng = deg2rad($latLng["longitude"]);
@@ -388,8 +388,21 @@ $app->post('/syncdata', function () use ($app) {
             $response->setJsonContent($json_response);
         }
         else{
-            $json_response = array("error"=>false,"error_msg"=>"");
-            $response->setJsonContent($json_response);
+            $phql = "DELETE FROM Tempslotlahanparkir WHERE id_lahan=:id_lahan:";
+            $status = $app->modelsManager->executeQuery($phql, array("id_lahan"=>$id_lahan));
+
+            if($status->success() == true){
+                $response->setJsonContent(array(
+                    'error'=>false,
+                    'error_msg'=>''
+                ));
+            }
+            else{
+                $response->setJsonContent(array(
+                    'error'=>true,
+                    'error_msg'=>'Error adding in database'
+                ));
+            }
         }
     }
     return $response;
@@ -443,10 +456,28 @@ $app->post('/data/latlng2', function () use ($app) {
     }
     else{
         if($numIntermediatePoint==2){
-            $response->setJsonContent(array(
-                'error'=>false,
-                'error_msg'=>'Warning : No intermediate point'
-            ));
+            $array_data[] = array("latitude"=>$lat1,"longitude"=>$lng1);
+            $array_data[] = array("latitude"=>$lat2, "longitude"=>$lng2);
+            foreach($array_data as $data){
+                $phql = "INSERT INTO Tempslotlahanparkir (id_lahan, latitude, longitude) values(:id_lahan:, :latitude:, :longitude:)";
+                $status = $app->modelsManager->executeQuery($phql, array(
+                    "id_lahan"=>$id_lahan,
+                    "latitude"=>$data["latitude"],
+                    "longitude"=>$data["longitude"]
+                ));
+            }
+            if($status->success()==true){
+                $response->setJsonContent(array(
+                    'error'=>false,
+                    'error_msg'=>''
+                ));
+            }
+            else{
+                $response->setJsonContent(array(
+                    'error'=>true,
+                    'error_msg'=>'Error adding in database'
+                ));
+            }
         }
         else{
             $response->setJsonContent(array(
