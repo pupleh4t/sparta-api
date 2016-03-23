@@ -327,7 +327,75 @@ $app->post('/update', function () use ($app) {
     return $response;
 });
 
-$app->post('/data/slot/update', function () use ($app) {
+$app->post('/syncdata', function () use ($app) {
+    $json_data = $app->request->getJsonRawBody();
+    $id_lahan = $json_data->id_lahan;
+
+    $phql = "SELECT latitude, longitude FROM Tempslotlahanparkir WHERE id_lahan = :id_lahan:";
+    $arrayLatLng = $app->modelsManager->executeQuery($phql, array("id_lahan"=>$id_lahan));
+
+    $response = new Response();
+
+    foreach($arrayLatLng as $latLng){
+        $phql = "INSERT INTO Slotlahanparkir (id_lahan, status, latitude, longitude) values (:id_lahan:, :status:, :latitude:, :longitude:)";
+        $status = $app->modelsManager->executeQuery($phql, array(
+            "id_lahan"=>$id_lahan,
+            "status"=>"FREE",
+            "latitude"=>$latLng["latitude"],
+            "longitude"=>$latLng["longitude"]
+        ));
+    }
+    if($status->success() == false){
+        $json_response = array("error"=>true,"error_msg"=>"Error in copying temp data to main data");
+        $response->setJsonContent($json_response);
+    }
+    else{
+        $X = $Y = $Z = 0;
+        $totalWeight = count($arrayLatLng);
+        foreach($arrayLatLng as $latLng){
+            $radLat = deg2rad($latLng["latitude"]);
+            $radLng = deg2rad($latLng["longitude"]);
+
+            $x = cos($radLat)*cos($radLng);
+            $y = cos($radLat)*sin($radLng);
+            $z = sin($radLat);
+
+            $X = $X + $x;
+            $Y = $Y + $y;
+            $Z = $Z + $z;
+        }
+
+        $X = $X/$totalWeight;
+        $Y = $Y/$totalWeight;
+        $Z = $Z/$totalWeight;
+
+        $radMidLat = atan2($Y,$X);
+        $hyp = sqrt(($X*$X)+($Y*$Y));
+        $radMidLng = atan2($Z, $hyp);
+
+        $midLat = rad2deg($radMidLat);
+        $midLng = rad2deg($radMidLng);
+
+        $phql = "UPDATE Lahanparkir SET latitude=:midLat:, longitude=:midLng:, max_kapasitas_mobil=:max_kapasitas_mobil: WHERE id_lahan=:id_lahan:";
+        $status = $app->modelsManager->executeQuery($phql, array(
+            "midLat" => $midLat,
+            "midLng" => $midLng,
+            "max_kapasitas_mobil" => $totalWeight,
+            "id_lahan" => $id_lahan
+        ));
+        if($status->success() == false){
+            $json_response = array("error"=>true,"error_msg"=>"Error calibrating the mid point");
+            $response->setJsonContent($json_response);
+        }
+        else{
+            $json_response = array("error"=>false,"error_msg"=>"");
+            $response->setJsonContent($json_response);
+        }
+    }
+    return $response;
+});
+
+$app->post('/data/latlng2', function () use ($app) {
     $json_data = $app->request->getJsonRawBody();
     $id_lahan = $json_data->id_lahan;
     $lat1 = $json_data->fromLatitude;

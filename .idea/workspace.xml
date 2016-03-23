@@ -47,24 +47,40 @@
       <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2040133">
-              <caret line="396" column="3" selection-start-line="396" selection-start-column="3" selection-end-line="396" selection-end-column="3" />
+            <state vertical-scroll-proportion="7.41">
+              <caret line="460" column="3" selection-start-line="460" selection-start-column="3" selection-end-line="460" selection-end-column="3" />
               <folding>
                 <element signature="e#6#64#0#PHP" expanded="true" />
                 <element signature="e#1953#2008#0#PHP" expanded="false" />
-                <marker date="1458637706880" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
-                <marker date="1458637706880" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
-                <marker date="1458637706880" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
-                <marker date="1458637706880" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
-                <marker date="1458637706880" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
-                <marker date="1458637706880" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
-                <marker date="1458637706880" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
-                <marker date="1458637706880" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
-                <marker date="1458637706880" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
-                <marker date="1458637706880" expanded="true" signature="10329:10341" placeholder="INSERT INTO Temp... " />
-                <marker date="1458637706880" expanded="true" signature="10329:10400" placeholder="INSERT INTO TempLatlng... " />
-                <marker date="1458637706880" expanded="true" signature="10329:10436" placeholder="INSERT INTO TempLatlng... " />
+                <marker date="1458703362686" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
+                <marker date="1458703362686" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
+                <marker date="1458703362686" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
+                <marker date="1458703362686" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
+                <marker date="1458703362686" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
+                <marker date="1458703362686" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
+                <marker date="1458703362686" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
+                <marker date="1458703362686" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
+                <marker date="1458703362686" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
+                <marker date="1458703362686" expanded="true" signature="9527:9605" placeholder="SELECT latit... Tempslotlahanparkir" />
+                <marker date="1458703362686" expanded="true" signature="9527:9606" placeholder="SELECT latit... Tempslotlahanparkir" />
+                <marker date="1458703362686" expanded="true" signature="9789:9856" placeholder="INSERT INTO Slotlahanparkir... " />
+                <marker date="1458703362686" expanded="true" signature="9789:9878" placeholder="INSERT INTO Slotlahanparkir... " />
+                <marker date="1458703362686" expanded="true" signature="9789:9879" placeholder="INSERT INTO Slotlahanparkir... " />
+                <marker date="1458703362686" expanded="true" signature="9789:9900" placeholder="INSERT INTO Slotlahanparkir... " />
+                <marker date="1458703362686" expanded="true" signature="9789:9911" placeholder="INSERT INTO Slotlahanparkir... " />
+                <marker date="1458703362686" expanded="true" signature="11086:11215" placeholder="UPDATE Lahan... " />
+                <marker date="1458703362686" expanded="true" signature="12782:12889" placeholder="INSERT INTO Tempslotlahanparkir... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hashCls.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/funct/hashCls.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,7 +88,7 @@
       <file leaf-file-name="Tempslotlahanparkir.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Tempslotlahanparkir.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667">
+            <state vertical-scroll-proportion="0.0">
               <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding />
             </state>
@@ -82,7 +98,7 @@
       <file leaf-file-name="TempLatlng.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/TempLatlng.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.703704">
+            <state vertical-scroll-proportion="0.0">
               <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding />
             </state>
@@ -92,7 +108,7 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.666667">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
@@ -172,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,6 +230,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="funct" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sparta2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sparta2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -222,6 +251,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,7 +313,7 @@
     <frame x="48" y="-4" width="1319" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12627451" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12941177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5121951" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -356,18 +386,24 @@
           <folding>
             <element signature="e#6#64#0#PHP" expanded="true" />
             <element signature="e#1953#2008#0#PHP" expanded="false" />
-            <marker date="1458637706880" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
-            <marker date="1458637706880" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
-            <marker date="1458637706880" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10341" placeholder="INSERT INTO Temp... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10400" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10436" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
+            <marker date="1458703362686" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
+            <marker date="1458703362686" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="9527:9605" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9527:9606" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9789:9856" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9878" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9879" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9900" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9911" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="11086:11215" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="12782:12889" placeholder="INSERT INTO Tempslotlahanparkir... " />
           </folding>
         </state>
       </provider>
@@ -435,18 +471,24 @@
           <folding>
             <element signature="e#6#64#0#PHP" expanded="true" />
             <element signature="e#1953#2008#0#PHP" expanded="false" />
-            <marker date="1458637706880" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
-            <marker date="1458637706880" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
-            <marker date="1458637706880" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10341" placeholder="INSERT INTO Temp... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10400" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10436" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
+            <marker date="1458703362686" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
+            <marker date="1458703362686" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="9527:9605" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9527:9606" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9789:9856" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9878" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9879" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9900" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9911" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="11086:11215" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="12782:12889" placeholder="INSERT INTO Tempslotlahanparkir... " />
           </folding>
         </state>
       </provider>
@@ -514,18 +556,24 @@
           <folding>
             <element signature="e#6#64#0#PHP" expanded="true" />
             <element signature="e#1953#2008#0#PHP" expanded="false" />
-            <marker date="1458637706880" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
-            <marker date="1458637706880" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
-            <marker date="1458637706880" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10341" placeholder="INSERT INTO Temp... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10400" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10436" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
+            <marker date="1458703362686" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
+            <marker date="1458703362686" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="9527:9605" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9527:9606" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9789:9856" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9878" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9879" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9900" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9911" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="11086:11215" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="12782:12889" placeholder="INSERT INTO Tempslotlahanparkir... " />
           </folding>
         </state>
       </provider>
@@ -590,13 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funct/hashCls.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -660,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +744,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/TempLatlng.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.703704">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding />
         </state>
@@ -721,41 +758,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Tempslotlahanparkir.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667">
+        <state vertical-scroll-proportion="0.0">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
+    <entry file="file://$PROJECT_DIR$/funct/hashCls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.666667">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2040133">
-          <caret line="396" column="3" selection-start-line="396" selection-start-column="3" selection-end-line="396" selection-end-column="3" />
+        <state vertical-scroll-proportion="7.41">
+          <caret line="460" column="3" selection-start-line="460" selection-start-column="3" selection-end-line="460" selection-end-column="3" />
           <folding>
             <element signature="e#6#64#0#PHP" expanded="true" />
             <element signature="e#1953#2008#0#PHP" expanded="false" />
-            <marker date="1458637706880" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
-            <marker date="1458637706880" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
-            <marker date="1458637706880" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
-            <marker date="1458637706880" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
-            <marker date="1458637706880" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10341" placeholder="INSERT INTO Temp... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10400" placeholder="INSERT INTO TempLatlng... " />
-            <marker date="1458637706880" expanded="true" signature="10329:10436" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="799:853" placeholder="SELECT email... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="1533:1692" placeholder="INSERT INTO Usercredential... " />
+            <marker date="1458703362686" expanded="true" signature="3466:3516" placeholder="SELECT * FRO... Usercredential" />
+            <marker date="1458703362686" expanded="true" signature="4819:4876" placeholder="SELECT * FRO... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="5502:5579" placeholder="INSERT INTO TempLatlng... " />
+            <marker date="1458703362686" expanded="true" signature="6110:6134" placeholder="SELECT * FRO... TempLatlng" />
+            <marker date="1458703362686" expanded="true" signature="6682:6757" placeholder="SELECT latit... Arealahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="7330:7405" placeholder="SELECT latit... Slotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="8298:8427" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="9527:9605" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9527:9606" placeholder="SELECT latit... Tempslotlahanparkir" />
+            <marker date="1458703362686" expanded="true" signature="9789:9856" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9878" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9879" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9900" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="9789:9911" placeholder="INSERT INTO Slotlahanparkir... " />
+            <marker date="1458703362686" expanded="true" signature="11086:11215" placeholder="UPDATE Lahan... " />
+            <marker date="1458703362686" expanded="true" signature="12782:12889" placeholder="INSERT INTO Tempslotlahanparkir... " />
           </folding>
         </state>
       </provider>
